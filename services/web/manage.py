@@ -13,7 +13,7 @@ def say_hi():
 
 @cli.command("create_db")
 def create_db():
-    db.drop_all()
+    """create_all doesn't issue CREATEs for tables already present in the target database."""
     db.create_all()
     db.session.commit()
 

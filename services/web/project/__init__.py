@@ -21,4 +21,4 @@ class Note(db.Model):
 
 @app.route("/")
 def hi():
-    return jsonify(greeting="hi")
+    return jsonify(greeting="hello there")

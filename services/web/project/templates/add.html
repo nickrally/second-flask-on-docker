@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div class="container">
+        <div class="blog-header">
+            <h2 class="blog-title">Add a Note</h2>
+        </div>
+        <div class="row">
+            <div class="col-sm-8 blog-main">
+                <form method="POST" action={{url_for('add')}}>
+                    <div class="form-group">
+                        {{form.english.label}}
+                        <input type="text" class="form-control" name="english" id="inputEnglish">
+                    </div>
+                    <div class="form-group">
+                        {{form.spanish.label}}
+                        <input type="text" class="form-control" rows="50" id="inputSpanish" name="spanish" >
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-primary search-btn">Save</button>
+                        <a class="btn btn-primary" href="/">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 blog-main">
+                <h4 class="blog-post-title">Delete {{ note.name }} ?</h4>
+                <form method="POST" action="">
+                    <input type="hidden" value="delete">
+                    <div>
+                        <a class="btn btn-primary" href="/">Cancel</a>
+                        <button type="submit" class="btn btn-primary search-btn">Delete</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
